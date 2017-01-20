@@ -8,6 +8,10 @@ from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import ThrottledDTPHandler, FTPHandler
 from pyftpdlib.servers import FTPServer
 # 用于读取配置文件
+# 用于读取配置文件
+# 用于读取配置文件
+# 用于读取配置文件
+
 from config_ftp import *
 
 
@@ -59,7 +63,7 @@ def init_ftp_server():
     handler.masquerade_address = masquerade_address
     # 主动模式和被动模式
     handler.passive_ports = range(passive_ports[0], passive_ports[1])
-
+ 
     # 监听的ip和端口
     address = (ip, port)
     server = FTPServer(address, handler)
